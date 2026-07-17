@@ -1,466 +1,314 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Eli Lavoie</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-    <link rel="icon" href="/images/favicon.ico">
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eli Roberts · Integration Engineer</title>
+	<meta name="description" content="Elijah Roberts is an integration engineer in Nashville, TN. MuleSoft integrations at Accenture, designed, built, and owned in production.">
+	<meta name="theme-color" content="#0D0F0E">
+	<link rel="canonical" href="https://eli-roberts.com/">
+	<meta property="og:title" content="Eli Roberts · Integration Engineer">
+	<meta property="og:description" content="MuleSoft integrations designed, built, and owned in production. Accenture, Nashville, TN.">
+	<meta property="og:url" content="https://eli-roberts.com/">
+	<meta property="og:type" content="website">
+	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230D0F0E'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%233FB56B'/%3E%3C/svg%3E">
+	<link rel="alternate icon" href="/images/favicon.ico">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--bg: #0D0F0E;
+			--text: #E8EAE8;
+			--body: #C2C7C3;
+			--muted: #878E89;
+			--green: #3FB56B;
+			--line: #232724;
+		}
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<span class="icon solid major fa-cloud"></span>
-					<h1><strong>Elijah Lavoie</strong><br /></h1>
-					<p>Musician, Designer, Coffee Enthusiast, Overall Nerd<br />
-					<strong>Software Developer</strong></p>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">About Me</a></li>
-					</ul>
+		* { margin: 0; padding: 0; box-sizing: border-box; }
+
+		body {
+			background: var(--bg);
+			color: var(--text);
+			font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+			font-variation-settings: 'wdth' 100;
+			font-size: 1rem;
+			line-height: 1.65;
+			-webkit-font-smoothing: antialiased;
+		}
+
+		.wrap {
+			max-width: 44rem;
+			margin: 0 auto;
+			padding: clamp(4rem, 10vw, 7rem) 1.5rem 0;
+		}
+
+		.mono {
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 0.72rem;
+			font-weight: 500;
+			letter-spacing: 0.18em;
+			text-transform: uppercase;
+		}
+
+		a {
+			color: var(--green);
+			text-decoration: none;
+			transition: color 0.15s ease;
+		}
+		a:hover {
+			color: var(--text);
+			text-decoration: underline;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 4px;
+		}
+		:focus-visible {
+			outline: 2px solid var(--green);
+			outline-offset: 3px;
+		}
+
+		/* hero */
+		.hero .mono { color: var(--green); }
+		.hero h1 {
+			font-weight: 800;
+			font-variation-settings: 'wdth' 125;
+			font-size: clamp(3rem, 12vw, 6.75rem);
+			line-height: 0.95;
+			text-transform: uppercase;
+			letter-spacing: -0.01em;
+			margin: 1.25rem 0 2rem;
+		}
+		.thesis {
+			font-size: clamp(1.15rem, 2.6vw, 1.4rem);
+			font-weight: 400;
+			color: var(--text);
+			max-width: 34ch;
+			line-height: 1.4;
+		}
+		.hero-links {
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 2rem;
+			margin-top: 2.5rem;
+		}
+		.hero-links a { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+		/* sections */
+		section {
+			margin-top: clamp(4rem, 9vw, 6rem);
+			padding-top: 2rem;
+			border-top: 1px solid var(--line);
+		}
+		.label { color: var(--green); margin-bottom: 1.75rem; }
+
+		.about p { max-width: 60ch; color: var(--body); }
+		.about p + p { margin-top: 1rem; }
+
+		/* experience */
+		.job {
+			display: grid;
+			grid-template-columns: 10.5rem 1fr;
+			gap: 1.5rem;
+			padding: 1.4rem 0;
+		}
+		.job + .job { border-top: 1px solid var(--line); }
+		.job .when {
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 0.75rem;
+			color: var(--muted);
+			letter-spacing: 0.05em;
+			padding-top: 0.3rem;
+		}
+		.job h3 {
+			font-weight: 650;
+			font-size: 1.1rem;
+			line-height: 1.3;
+			letter-spacing: 0.005em;
+		}
+		.job .org {
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 0.72rem;
+			letter-spacing: 0.08em;
+			text-transform: uppercase;
+			color: var(--muted);
+			margin: 0.25rem 0 0.7rem;
+		}
+		.job p { font-size: 0.95rem; color: var(--body); max-width: 56ch; }
+
+		/* stack */
+		.row {
+			display: grid;
+			grid-template-columns: 13rem 1fr;
+			gap: 1.5rem;
+			padding: 1rem 0;
+		}
+		.row + .row { border-top: 1px solid var(--line); }
+		.row dt {
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 0.72rem;
+			font-weight: 500;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--text);
+			padding-top: 0.25rem;
+		}
+		.row dd { font-size: 0.95rem; color: var(--body); }
+		.row.cert dt { color: var(--green); }
+		.row.cert dd { color: var(--text); }
+
+		/* contact */
+		.email {
+			display: inline-block;
+			font-weight: 800;
+			font-variation-settings: 'wdth' 118;
+			font-size: clamp(1.6rem, 5.5vw, 2.9rem);
+			text-transform: uppercase;
+			letter-spacing: 0;
+			line-height: 1.15;
+			color: var(--text);
+			word-break: break-all;
+			margin-top: 0.5rem;
+		}
+		.email:hover { color: var(--green); text-decoration: none; }
+		.contact p { color: var(--body); max-width: 55ch; }
+		.contact-links {
+			list-style: none;
+			display: flex;
+			gap: 2rem;
+			margin-top: 2rem;
+		}
+		.contact-links a { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
+
+		footer {
+			margin-top: clamp(4rem, 9vw, 6rem);
+			padding: 1.5rem 0 3rem;
+			border-top: 1px solid var(--line);
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.5rem 2rem;
+			justify-content: space-between;
+			font-family: 'IBM Plex Mono', monospace;
+			font-size: 0.7rem;
+			letter-spacing: 0.06em;
+			color: var(--muted);
+		}
+
+		@media (max-width: 40rem) {
+			.job, .row { grid-template-columns: 1fr; gap: 0.3rem; }
+			.job .when, .row dt { padding-top: 0; }
+			.hero-links, .contact-links { gap: 1.25rem; }
+		}
+	</style>
+</head>
+<body>
+
+	<div class="wrap">
+
+		<header class="hero">
+			<p class="mono">Integration Engineer · Nashville, TN</p>
+			<h1>Elijah<br>Roberts</h1>
+			<p class="thesis">I keep digging until the system makes sense.</p>
+			<ul class="hero-links">
+				<li><a href="mailto:erob@eli-roberts.com">Email</a></li>
+				<li><a href="https://www.linkedin.com/in/elijah-roberts/" target="_blank" rel="noopener">LinkedIn</a></li>
+				<li><a href="https://github.com/eli-roberts" target="_blank" rel="noopener">GitHub</a></li>
+			</ul>
+		</header>
+
+		<section class="about" aria-label="About">
+			<p class="mono label">About</p>
+			<p>Nashville Software School in 2020, Accenture in 2021, and up the stack from there: Salesforce development, then production support across four platforms, now MuleSoft integrations designed and built end to end.</p>
+			<p>The constant is that I don't leave systems half-understood. "Restarted it and it works now" has never closed one of my tickets. Tracing incidents all the way to root cause is how support work turned into owning production APIs. Integration architecture is the next step.</p>
+		</section>
+
+		<section aria-label="Experience">
+			<p class="mono label">Experience</p>
+
+			<article class="job">
+				<div class="when">06/2025 — now</div>
+				<div>
+					<h3>Application Development Analyst</h3>
+					<p class="org">Accenture · Nashville, TN</p>
+					<p>Design and build MuleSoft integrations from architecture through implementation, with expanding ownership across production APIs and batch job systems. Primary point of contact for integration issues, coordinating across teams to diagnose and resolve production problems.</p>
 				</div>
-			</section>
+			</article>
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Hi There!<br /></h2>
-							</header>
-              <p>I'm Eli, a graduate from Cohort 40 of the Nashville Software School. Before starting my journey into software development, I spent my time making music and art, which are both things I love trying to integrate into my projects. <br/>
-              I've always had an interest in technology, and software development allows me to explore and learn so many new things. I get a lot of enjoyment out of picking up new technologies, and learning new ways to apply what I already know.
-              </p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="https://nss-cohort-40.github.io/images/classmates//BW/ElijahBW.jpg" alt="" /></span>
-						</div>
-					</div>
+			<article class="job">
+				<div class="when">09/2022 — 06/2025</div>
+				<div>
+					<h3>Application Development Associate</h3>
+					<p class="org">Accenture · Nashville, TN</p>
+					<p>Kept production stable across MuleSoft, Appian, Globalscape, and MFT platforms through monitoring, triage, root-cause troubleshooting, patching, and performance tuning. Moved into integration engineering, designing and building new MuleSoft integrations and taking primary ownership of three production APIs.</p>
 				</div>
-			</section>
+			</article>
 
-		<!-- Two -->
-			<section id="two" class="main style2">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<ul class="major-icons">
-								<li><span class="icon major-brands style1 fa-html5"></span></li>
-								<li><span class="icon major-brands style2 fa-css3-alt"></span></li>
-								<li><span class="icon major-brands style3 major fa-js"></span></li>
-								<li><span class="icon major-brands style6 major fa-react"></span></li>
-								<li><span class="icon major-brands style4 major fa-python"></span></li>
-								<li><span class="icon major-brands style5 major fa-github"></span></li>
-							</ul>
-						</div>
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Technology</h2>
-							</header>
-							<p>During the first three months at the Nashville Software School, our curriculum focused on front-end development. We started off with HTML and CSS, and then spent a majority of our time working with vanilla JavaScript. During our time in the front-end, we were also familiarized with the GitHub workflow.</p>
-							<p>To finish off our front-end curriculum, we began to learn React. React was the primary tool used to write my front-end capstone. After finishing up our React chapter, we moved on to server side technologies. Python and Django were our bread and butter, while also learning the basics of SQL. </p>
-							<p>Finishing off my time at NSS, I completed my back-end capstone, using React for the client side, and a Django REST API for my server side, which communicated with an SQLite database.</p>
-						</div>
-					</div>
+			<article class="job">
+				<div class="when">07/2021 — 09/2022</div>
+				<div>
+					<h3>Technology Apprentice</h3>
+					<p class="org">Accenture · Nashville, TN</p>
+					<p>Built Visualforce pages, Apex classes, and Salesforce reports supporting Trade Promotion Management, including custom triggers and UI enhancements end users relied on to track promotional trade activity.</p>
 				</div>
-			</section>
+			</article>
 
-		<!-- Three -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Projects</h2>
-					</header>
-					<p>Here are some projects I've worked on</p>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/mixup_homepage.png" alt="" /></span>
-							<h3>MixUp</h3>
-							<p>MixUp is my back-end capstone completed at NSS, and is a file-sharing webapp designed around promoting collaboration between musicians and producers.</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/eli-lavoie/mixup_frontend" target="_blank" class="button">Repo Here</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/climbtogether_homepage.png" alt="" /></span>
-							<h3>ClimbTogether</h3>
-							<p>ClimbTogether is my front-end capstone completed at NSS, and is a webapp designed to help League of Legends players find teammates to play with.</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/eli-lavoie/climbTogether-gg" target="_blank" class="button">Repo Here</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/bangazon.png" alt="" /></span>
-							<h3>Bangazon</h3>
-							<p>Bangazon is a mock e-commerce app and group project that was completed at NSS. Client-side written in React, server-side as Django REST API.</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/nss-cohort-40/bangazon-ecommerce-client-lumberjacks-front" target="_blank" class="button">Repo Here</a></li>
-							</ul>
-						</div>
-					</div>
+			<article class="job">
+				<div class="when">04/2020 — 10/2020</div>
+				<div>
+					<h3>Full Stack Software Development</h3>
+					<p class="org">Nashville Software School</p>
+					<p>Intensive full-stack bootcamp: HTML, CSS, JavaScript, and React on the front end, Python, Django, and SQL on the back end, Git and GitHub team workflows throughout.</p>
 				</div>
-			</section>
+			</article>
+		</section>
 
-		<!-- Four -->
-			<section id="four" class="main style2 special">
-				<div class="container">
-					<header class="major">
-						<h2>Like what you see?</h2>
-					</header>
-					<p>Connect with me!</p>
-					<ul class="actions special">
-						<li><a target="_blank" href="https://www.linkedin.com/in/elijah-lavoie/" class="button wide primary">LinkedIn</a></li>
-						<li><a href="mailto: storey14@gmail.com" class="button wide">Email</a></li>
-					</ul>
+		<section aria-label="Stack">
+			<p class="mono label">Stack</p>
+			<dl>
+				<div class="row">
+					<dt>MuleSoft / Anypoint</dt>
+					<dd>RAML, API design and implementation, DataWeave, error handling, connectors, CloudHub deployment</dd>
 				</div>
-			</section>
-
-		<!-- Five -->
-		<!--
-			<section id="five" class="main style1">
-				<div class="container">
-					<header class="major special">
-						<h2>Elements</h2>
-					</header>
-
-					<section>
-						<h4>Text</h4>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<header>
-							<h4>Heading with a Subtitle</h4>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<header>
-							<h5>Heading with a Subtitle</h5>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h5>Blockquote</h5>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h5>Preformatted</h5>
-						<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
-
-					<section>
-						<h4>Lists</h4>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h5>Unordered</h5>
-								<ul>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-								<h5>Alternate</h5>
-								<ul class="alt">
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h5>Ordered</h5>
-								<ol>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis viverra.</li>
-									<li>Felis enim feugiat.</li>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis lorem.</li>
-									<li>Felis enim et feugiat.</li>
-								</ol>
-								<h5>Icons</h5>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<h5>Actions</h5>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<ul class="actions">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions small">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary fit">Default</a></li>
-									<li><a href="#" class="button fit">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small fit">Small</a></li>
-									<li><a href="#" class="button small fit">Small</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h4>Table</h4>
-						<h5>Default</h5>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h5>Alternate</h5>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h4>Buttons</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions fit">
-							<li><a href="#" class="button fit">Fit</a></li>
-							<li><a href="#" class="button primary fit">Fit</a></li>
-							<li><a href="#" class="button fit">Fit</a></li>
-						</ul>
-						<ul class="actions fit small">
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-							<li><a href="#" class="button fit small">Fit + Small</a></li>
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h4>Form</h4>
-						<form method="post" action="#">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-normal" name="demo-priority">
-									<label for="demo-priority-normal">Normal</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
-					<section>
-						<h4>Image</h4>
-						<h5>Fit</h5>
-						<div class="box alt">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-							</div>
-						</div>
-						<h5>Left &amp; Right</h5>
-						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-					</section>
-
+				<div class="row">
+					<dt>API &amp; Integration</dt>
+					<dd>REST APIs, API-led connectivity, system / process / experience layer design</dd>
 				</div>
-			</section>
-		-->
+				<div class="row">
+					<dt>Python</dt>
+					<dd>Django, REST API development, scripting and automation, JSON and SQL data manipulation</dd>
+				</div>
+				<div class="row">
+					<dt>SQL</dt>
+					<dd>SQLite, SOQL, Django ORM and REST-based querying</dd>
+				</div>
+				<div class="row">
+					<dt>Front end</dt>
+					<dd>React, Vue, JavaScript, HTML and CSS</dd>
+				</div>
+				<div class="row cert">
+					<dt>Certified</dt>
+					<dd>MuleSoft Certified Developer, Level 1 (MCD1) · March 2025</dd>
+				</div>
+			</dl>
+		</section>
 
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a target="_blank" href="https://github.com/eli-lavoie" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="mailto: storey14@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					<li><a target="_blank" href="https://www.linkedin.com/in/elijah-lavoie/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</section>
+		<section class="contact" aria-label="Contact">
+			<p class="mono label">Contact</p>
+			<p>Based in Nashville, comfortable fully remote. Email gets the fastest response:</p>
+			<a class="email" href="mailto:erob@eli-roberts.com">erob@eli-roberts.com</a>
+			<ul class="contact-links">
+				<li><a href="https://www.linkedin.com/in/elijah-roberts/" target="_blank" rel="noopener">LinkedIn</a></li>
+				<li><a href="https://github.com/eli-roberts" target="_blank" rel="noopener">GitHub</a></li>
+			</ul>
+		</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<footer>
+			<span>© 2026 Elijah Roberts</span>
+			<span>One HTML file. No build step.</span>
+		</footer>
 
-	</body>
+	</div>
+
+</body>
 </html>
