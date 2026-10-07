@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Eli Roberts · Integration Engineer</title>
 	<meta name="description" content="Elijah Roberts is an integration engineer in Nashville, TN. MuleSoft integrations at Accenture, designed, built, and owned in production.">
-	<meta name="theme-color" content="#0D0F0E">
+	<meta name="theme-color" content="#f5f2eb">
 	<link rel="canonical" href="https://eli-roberts.com/">
 	<meta property="og:title" content="Eli Roberts · Integration Engineer">
 	<meta property="og:description" content="MuleSoft integrations designed, built, and owned in production. Accenture, Nashville, TN.">
@@ -13,203 +13,16 @@
 	<meta property="og:type" content="website">
 	<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230D0F0E'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%233FB56B'/%3E%3C/svg%3E">
 	<link rel="alternate icon" href="/images/favicon.ico">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-	<style>
-		:root {
-			--bg: #0D0F0E;
-			--text: #E8EAE8;
-			--body: #C2C7C3;
-			--muted: #878E89;
-			--green: #3FB56B;
-			--line: #232724;
-		}
-
-		* { margin: 0; padding: 0; box-sizing: border-box; }
-
-		body {
-			background: var(--bg);
-			color: var(--text);
-			font-family: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
-			font-variation-settings: 'wdth' 100;
-			font-size: 1rem;
-			line-height: 1.65;
-			-webkit-font-smoothing: antialiased;
-		}
-
-		.wrap {
-			max-width: 44rem;
-			margin: 0 auto;
-			padding: clamp(4rem, 10vw, 7rem) 1.5rem 0;
-		}
-
-		.mono {
-			font-family: 'IBM Plex Mono', monospace;
-			font-size: 0.72rem;
-			font-weight: 500;
-			letter-spacing: 0.18em;
-			text-transform: uppercase;
-		}
-
-		a {
-			color: var(--green);
-			text-decoration: none;
-			transition: color 0.15s ease;
-		}
-		a:hover {
-			color: var(--text);
-			text-decoration: underline;
-			text-decoration-thickness: 1px;
-			text-underline-offset: 4px;
-		}
-		:focus-visible {
-			outline: 2px solid var(--green);
-			outline-offset: 3px;
-		}
-
-		/* hero */
-		.hero .mono { color: var(--green); }
-		.hero h1 {
-			font-weight: 800;
-			font-variation-settings: 'wdth' 125;
-			font-size: clamp(3rem, 12vw, 6.75rem);
-			line-height: 0.95;
-			text-transform: uppercase;
-			letter-spacing: -0.01em;
-			margin: 1.25rem 0 2rem;
-		}
-		.thesis {
-			font-size: clamp(1.15rem, 2.6vw, 1.4rem);
-			font-weight: 400;
-			color: var(--text);
-			max-width: 34ch;
-			line-height: 1.4;
-		}
-		.hero-links {
-			list-style: none;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 2rem;
-			margin-top: 2.5rem;
-		}
-		.hero-links a { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
-		/* sections */
-		section {
-			margin-top: clamp(4rem, 9vw, 6rem);
-			padding-top: 2rem;
-			border-top: 1px solid var(--line);
-		}
-		.label { color: var(--green); margin-bottom: 1.75rem; }
-
-		.about p { max-width: 60ch; color: var(--body); }
-		.about p + p { margin-top: 1rem; }
-
-		/* experience */
-		.job {
-			display: grid;
-			grid-template-columns: 10.5rem 1fr;
-			gap: 1.5rem;
-			padding: 1.4rem 0;
-		}
-		.job + .job { border-top: 1px solid var(--line); }
-		.job .when {
-			font-family: 'IBM Plex Mono', monospace;
-			font-size: 0.75rem;
-			color: var(--muted);
-			letter-spacing: 0.05em;
-			padding-top: 0.3rem;
-		}
-		.job h3 {
-			font-weight: 650;
-			font-size: 1.1rem;
-			line-height: 1.3;
-			letter-spacing: 0.005em;
-		}
-		.job .org {
-			font-family: 'IBM Plex Mono', monospace;
-			font-size: 0.72rem;
-			letter-spacing: 0.08em;
-			text-transform: uppercase;
-			color: var(--muted);
-			margin: 0.25rem 0 0.7rem;
-		}
-		.job p { font-size: 0.95rem; color: var(--body); max-width: 56ch; }
-
-		/* stack */
-		.row {
-			display: grid;
-			grid-template-columns: 13rem 1fr;
-			gap: 1.5rem;
-			padding: 1rem 0;
-		}
-		.row + .row { border-top: 1px solid var(--line); }
-		.row dt {
-			font-family: 'IBM Plex Mono', monospace;
-			font-size: 0.72rem;
-			font-weight: 500;
-			letter-spacing: 0.12em;
-			text-transform: uppercase;
-			color: var(--text);
-			padding-top: 0.25rem;
-		}
-		.row dd { font-size: 0.95rem; color: var(--body); }
-		.row.cert dt { color: var(--green); }
-		.row.cert dd { color: var(--text); }
-
-		/* contact */
-		.email {
-			display: inline-block;
-			font-weight: 800;
-			font-variation-settings: 'wdth' 118;
-			font-size: clamp(1.6rem, 5.5vw, 2.9rem);
-			text-transform: uppercase;
-			letter-spacing: 0;
-			line-height: 1.15;
-			color: var(--text);
-			word-break: break-all;
-			margin-top: 0.5rem;
-		}
-		.email:hover { color: var(--green); text-decoration: none; }
-		.contact p { color: var(--body); max-width: 55ch; }
-		.contact-links {
-			list-style: none;
-			display: flex;
-			gap: 2rem;
-			margin-top: 2rem;
-		}
-		.contact-links a { font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; }
-
-		footer {
-			margin-top: clamp(4rem, 9vw, 6rem);
-			padding: 1.5rem 0 3rem;
-			border-top: 1px solid var(--line);
-			display: flex;
-			flex-wrap: wrap;
-			gap: 0.5rem 2rem;
-			justify-content: space-between;
-			font-family: 'IBM Plex Mono', monospace;
-			font-size: 0.7rem;
-			letter-spacing: 0.06em;
-			color: var(--muted);
-		}
-
-		@media (max-width: 40rem) {
-			.job, .row { grid-template-columns: 1fr; gap: 0.3rem; }
-			.job .when, .row dt { padding-top: 0; }
-			.hero-links, .contact-links { gap: 1.25rem; }
-		}
-	</style>
+	<link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
 
 	<div class="wrap">
 
 		<header class="hero">
 			<p class="mono">Integration Engineer · Nashville, TN</p>
-			<h1>Elijah<br>Roberts</h1>
-			<p class="thesis">I keep digging until the system makes sense.</p>
+			<h1>Elijah Roberts</h1>
+			<p class="thesis">Hi, I’m Eli. I build integrations and help keep them running.</p>
 			<ul class="hero-links">
 				<li><a href="mailto:erob@eli-roberts.com">Email</a></li>
 				<li><a href="https://www.linkedin.com/in/elijah-roberts/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -218,20 +31,26 @@
 		</header>
 
 		<section class="about" aria-label="About">
-			<p class="mono label">About</p>
-			<p>Nashville Software School in 2020, Accenture in 2021, and up the stack from there: Salesforce development, then production support across four platforms, now MuleSoft integrations designed and built end to end.</p>
-			<p>The constant is that I don't leave systems half-understood. "Restarted it and it works now" has never closed one of my tickets. Tracing incidents all the way to root cause is how support work turned into owning production APIs. Integration architecture is the next step.</p>
+			<h2 class="label">About me</h2>
+			<p>I’m a developer and integration engineer at Accenture, based near Nashville. Most of my work is in MuleSoft: building APIs, moving data between applications, and troubleshooting production issues.</p>
+			<p>I started as an apprentice in 2021 and moved into MuleSoft development in late 2023. I enjoy coding, figuring out how systems work, and writing scripts to make repetitive tasks easier.</p>
 		</section>
 
-		<section aria-label="Experience">
-			<p class="mono label">Experience</p>
+		<section aria-label="Recent work">
+<h2 class="label">What I work on</h2>
+<article class="example"><h3>Data for custom reports</h3><p>I built an experience-layer API that supplies Salesforce with data for custom reports. It calls a system-layer API built by a teammate, which retrieves the data from Snowflake, then returns formatted JSON to Salesforce.</p></article>
+<article class="example"><h3>Keeping applications in sync</h3><p>I built two connected applications: one picks up SQL database events on a schedule and sends the data to Salesforce. The other listens for Salesforce platform events and writes updated data back to SQL.</p></article>
+<article class="example"><h3>Less repetitive editing</h3><p>Adding a large set of fields to MuleSoft transformations means a lot of formatting. I write Python scripts to handle that preparation so I don’t have to edit every field by hand.</p></article>
+</section>
+<section aria-label="Experience">
+			<h2 class="label">Experience</h2>
 
 			<article class="job">
 				<div class="when">06/2025 — now</div>
 				<div>
 					<h3>Application Development Analyst</h3>
 					<p class="org">Accenture · Nashville, TN</p>
-					<p>Design and build MuleSoft integrations from architecture through implementation, with expanding ownership across production APIs and batch job systems. Primary point of contact for integration issues, coordinating across teams to diagnose and resolve production problems.</p>
+					<p>I build MuleSoft integrations and own three production APIs and six integration applications. My responsibilities include design decisions, deployments, maintenance, and incident resolution, working with internal teams and clients.</p>
 				</div>
 			</article>
 
@@ -264,7 +83,7 @@
 		</section>
 
 		<section aria-label="Stack">
-			<p class="mono label">Stack</p>
+			<h2 class="label">Tools &amp; skills</h2>
 			<dl>
 				<div class="row">
 					<dt>MuleSoft / Anypoint</dt>
@@ -276,15 +95,15 @@
 				</div>
 				<div class="row">
 					<dt>Python</dt>
-					<dd>Django, REST API development, scripting and automation, JSON and SQL data manipulation</dd>
+					<dd>Scripting, bulk data formatting, Django and REST API development</dd>
 				</div>
 				<div class="row">
-					<dt>SQL</dt>
-					<dd>SQLite, SOQL, Django ORM and REST-based querying</dd>
+					<dt>Databases &amp; tools</dt>
+					<dd>SQL, SQLite, Git and GitHub</dd>
 				</div>
 				<div class="row">
 					<dt>Front end</dt>
-					<dd>React, Vue, JavaScript, HTML and CSS</dd>
+					<dd>React, JavaScript, HTML and CSS</dd>
 				</div>
 				<div class="row cert">
 					<dt>Certified</dt>
@@ -294,8 +113,8 @@
 		</section>
 
 		<section class="contact" aria-label="Contact">
-			<p class="mono label">Contact</p>
-			<p>Based in Nashville, comfortable fully remote. Email gets the fastest response:</p>
+			<h2 class="label">Get in touch</h2>
+			<p>I’m interested in development, integration, and technical support roles. I’m based near Nashville and open to remote work.</p>
 			<a class="email" href="mailto:erob@eli-roberts.com">erob@eli-roberts.com</a>
 			<ul class="contact-links">
 				<li><a href="https://www.linkedin.com/in/elijah-roberts/" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -305,7 +124,7 @@
 
 		<footer>
 			<span>© 2026 Elijah Roberts</span>
-			<span>One HTML file. No build step.</span>
+			<a href="#top">Back to top</a>
 		</footer>
 
 	</div>
